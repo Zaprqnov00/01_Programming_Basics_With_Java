@@ -1,0 +1,37 @@
+package ProgrammingBasicsWithJava.IfElse;
+
+import java.util.Scanner;
+
+public class AreaOfFigures {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String type = scanner.nextLine();
+
+
+        if (type.equals("square")) {
+            double side = Double.parseDouble(scanner.nextLine());
+
+            System.out.printf("%.3f", side * side);
+
+        }else if (type.equals("rectangle")){
+            double len = Double.parseDouble(scanner.nextLine());
+            double weight = Double.parseDouble(scanner.nextLine());
+
+            System.out.printf("%.3f", len * weight);
+
+
+        }else if(type.equals("circle")){
+            double r = Double.parseDouble(scanner.nextLine());
+
+            System.out.printf("%.3f", Math.PI * r * r);
+
+        }else if (type.equals("triangle")){
+            double base = Double.parseDouble(scanner.nextLine());
+            double height = Double.parseDouble(scanner.nextLine());
+
+            System.out.printf("%.3f", height * base / 2 );
+
+        }
+    }
+}
